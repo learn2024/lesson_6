@@ -4,6 +4,8 @@ import bcrypt from 'bcrypt';
 const saltRounds = 10;
 
 
+
+// לא למדנו עדיין
 // ספרית joi מאפשרת לנו להגדיר ולידציות על שדה קלט מהמשתמש
 // אפשר לראות את הסוגים השונים 
 export const userSchema = Joi.object({
@@ -19,7 +21,7 @@ export const userSchema = Joi.object({
 });
 
 
-
+// פונקצית הצפנה
 export const bcryptPassword = async function (password, res) {
   const salt = await bcrypt.genSalt(saltRounds);
   const hashedPassword = await bcrypt.hash(password, salt);
